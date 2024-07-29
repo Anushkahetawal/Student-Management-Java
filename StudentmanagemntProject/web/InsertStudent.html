@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+            nav{
+                background-color: black;
+                overflow: hidden;
+                height: 40px;
+                
+            }
+            nav A{
+                color:white;
+                padding: 15px 20px 4px;
+                margin: 6px;
+                font-size: 30px;
+            }
+        </style>
+
+<script language="javascript">
+    function display()
+    {
+    //alert("hello")
+    var rno,name,phy,chem,maths;
+    rno=document.getElementById("userno").value;
+    name=document.getElementById("username").value;
+    phy=document.getElementById("userphy").value;
+    chem=document.getElementById("userchem").value;
+    maths=document.getElementById("usermaths").value;
+    
+    if(rno=="")
+    {
+     alert("Roll number name cant be blank");
+     document.getElementById("userno").focus();
+     return false;
+    }
+    if(name=="")
+    {
+     alert("Name cant be blank");
+     document.getElementById("username").focus();
+     return false;
+    }
+    if(phy=="")
+    {
+     alert("Physics  cant be blank");
+     document.getElementById("userphy").focus();
+     return false;
+    }
+     if(phy>100 || phy<0)
+          {
+             alert("Invalid Phyics Marks ");
+              document.getElementById("userphy").focus();
+              document.getElementById("userphy").select();
+              return false  ;
+          }
+    
+    if(chem=="")
+    {
+     alert("Chemistry cant be blank");
+     document.getElementById("userchem").focus();
+     return false;
+    }
+     if(chem>100 || chem<0)
+          {
+             alert("Invalid Phyics Marks ");
+              document.getElementById("userchem").focus();
+              document.getElementById("userchem").select();
+              return false  
+          }
+    
+    if(maths=="")
+    {
+     alert("Maths cant be blank");
+     document.getElementById("usermaths").focus();
+     return false;
+    }
+     if(maths>100 || maths<0)
+          {
+             alert("Invalid Phyics Marks ");
+              document.getElementById("usermaths").focus();
+              document.getElementById("usermaths").select();
+              return false  
+          }
+    
+    
+    
+    return true;
+   
+   }
+    </script>
+
+</head>
+<body>
+  <center>
+       <h1>Student DAO Application</h1>
+      <br> 
+      <nav>
+       <A href="FrontPage.html">Home</A>  
+       <A href="InsertStudent.html">Insert Student</A>  
+       <A href="DeleteStudent.html">Delete Student</A>
+       <A href="SearchStudent.html">Search Student</A>
+       <A href="SearchAll">Search All</A>  
+<!--       searchall name ki servlet hum direct call krege-->
+       <A href="UpdateStudent.html">Update Student</A>
+       <A href>About Us</A>
+       </nav>
+     <br>
+     <h2><u> Student Entry form</u></h2>
+            <form  action="Insertdata1" method="post" >
+          
+          
+          <table border="2" >
+            <tr>
+                <th>Roll number</th>
+                <td><input type="text" name="txtrno" id="userno"></td>
+            </tr>
+
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="txtname" id="username"></td>
+            </tr>
+            <tr>
+               <th>Physics</th>
+                <td><input type="text" name="txtphy" id="userphy"></td>
+            </tr>
+
+
+            <tr>
+                <th>Chemistry</th>
+                <td><input type="text" name="txtchem" id="userchem"></td>
+            </tr>
+
+            <tr>
+               <th>Maths</th>
+                <td><input type="text" name="txtmaths" id="usermaths"></td>
+            
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <input type="submit" value="submit" onclick="return display()">
+                    <input type="reset" value="reset">
+                </td>
+            </tr>
+        </table>
+    
+          </form>
+          
+      </center>
+    
+  </body>
+</html>

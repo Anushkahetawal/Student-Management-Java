@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            nav{
+                background-color: black;
+                overflow: hidden;
+                height: 40px;
+                
+            }
+            nav A{
+                color:white;
+                padding: 15px 20px 4px;
+                margin: 6px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <center> 
+          <h1>Student DAO Application</h1>
+      <br> 
+      <nav>
+        <A href="header.html">Home</A>  
+       <A href="Insert.html">Insert Student</A>  
+       <A href="Delete.html">Delete Student</A>
+       <A href="Search.html">Search Student</A>
+       <A href="SearchAll">Search All</A>  
+<!--       searchall name ki servlet hum direct call krege-->
+       <A href="Update.html">Update Student</A>
+       <A href>About Us</A>
+        </nav>
+       <br><br>
+       <font color="blue" size="5">Student Delete Page</font>    
+       <form method="post" action="Searchdelete">    
+       <table border="1"> 
+       <tr>
+           <th>Roll No:</th>
+           <td><input type="text" name="txtrno" id="userno"></td>
+       </tr>    
+       <tr>
+           <td></td>
+          <td>
+              <input type="submit" value="Submit" onclick="return validate()">
+              <input type="reset" value="Reset">
+          </td> 
+       </tr>
+       
+       </table>
+       </form>    
+       </center>    
+    
+    </body>
+</html>
